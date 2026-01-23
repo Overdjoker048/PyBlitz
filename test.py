@@ -16,6 +16,7 @@ moyenne = (a + b + c) / 3
 assert modulo == 1
 if x := 10 > 5:
     print(f"x est {x}")
+
 # Affichage des résultats
 a = 12
 lst = []
@@ -23,6 +24,7 @@ for i in range(20):
     lst.append(i)
     x = (12+5j)
 lst2 = [i for i in "Hey"]
+
 print(f"Addition: {a} + {b} = {addition}")
 print(f"Soustraction: {a} - {b} = {soustraction}")
 print(f"Multiplication: {a} × {b} = {multiplication}")
