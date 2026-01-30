@@ -27,10 +27,10 @@ for tok in tokenize.tokenize(line_generator):
     if tok_type == "OP" and tok.string == ";":
         passed += 1
         continue
-    if tok.string == "    ":
+    if tok_type == "INDENT":
         instruction += 1
-        stdout.write(f"[{tok.start[0]:<2}] {tok.type:<14} '\\t'\n")
-    if tok_type not in ("COMMENT", "NL"):
+        stdout.write(f"[{tok.start[0]:<2}] {tok_type:<14} '{'\\t'*(len(tok.string)//4)}'\n")
+    elif tok_type not in ("COMMENT", "NL"):
         instruction += 1
         stdout.write(f"[{tok.start[0]:<2}] {tok_type:<14} {repr(tok.string)}\n")
     else:
@@ -41,4 +41,6 @@ stdout.write(f"\nInstructions comptées : {instruction}\nTokens ignorés : {pass
 #reconvertir en code
 #convertir les print en sys.write.stdout et formatter l entré
 #degager le typage et docstrings et valeur inutile
-
+#supprimer tout ce qui e entre -> et :
+#supprimer toutes les lignes qui commences par un nom name
+#supprimer tout ce aui se toruve apres un : jusau au prochain operateur

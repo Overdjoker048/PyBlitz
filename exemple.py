@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import sys
+sys.stdout.write("Hello World!")
 """Calculatrice simple - 4 opérations de base."""
 
 def calculer(a: float, b: float, op: str) -> float:
@@ -40,3 +42,6 @@ def main() -> None:
 # Exécution du programme
 if __name__ == "__main__":
     main();
+    a: int
+    (12)
+    ["pipi"]
